@@ -16,36 +16,7 @@ def get_total_alphabets():
     alphabets = get_digits() + get_letters() + get_special_character()
     return alphabets
 
-# def limit_wraper(fun,limit):
-#     num=''
-#     for i in limit:
-#         num+=fun()
-#     return num    
-
-# def randum_number_generator():
-#     number=r.choice(get_digits())
-#     return number
-    
-# def random_alpha_letters():
-#     alpha=r.choice(get_letters())
-#     return alpha
-
-# def random_special_character():
-#     special_character = r.choice(get_special_character())
-#     return special_character
-
-#to check user is entering Digit and right length greater than 3
-
-# def pswd_length_IsDigit(leng):
-#     while leng < 8 :
-#         if (type(leng) is int):
-#             leng=int(input("Enter Length equal or greater than 8 upto 20 For a Strong Passward"))
-#         else:
-#             print("Please enter a valid digit number greater \nthan or equal to 8 for Strong passward  ")
- 
-
-#this function simply generate random passward 
-
+# it generate simple random number 
 def simple_random_passward(leng):
     rand_paswd= ''
     for i in range(leng):
@@ -55,7 +26,6 @@ def simple_random_passward(leng):
 # minimum pasward length should be 8
 # Atleast 1 special character
 # Atleast 3 digits   
-
 def Constraint_random_pasward(leng):
     digits=get_digits()
     sp_ch=get_special_character()
@@ -66,11 +36,9 @@ def Constraint_random_pasward(leng):
             sum(value in digits for value in pasward)>=3):
             return pasward
     
-        
-
 def menu():
     print("\n---------Random-Passward-Generator---------\n")
-    print("1. Simple Passward Generator\n2.Constraint Passward Generator\n")
+    print("1. Simple Passward Generator\n2. Constraint Passward Generator\n")
     print("Enter your choice(1 or 2):")
 
 def checker(inpt,down_limit,up_limit):
@@ -79,7 +47,6 @@ def checker(inpt,down_limit,up_limit):
     return inpt
 
 def selecte_generator(inpt,leng):
-    
     if (inpt==1):
         passward=simple_random_passward(leng)
         return passward
